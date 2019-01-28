@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.AppMargin {
+  margin: 0px 50px 0px 50px;  
+}
+
+.PercentageColor {
+  margin: 0px 50px 0px 50px;
+  background-color: orange;
+}
+
+.ProgressTick {
+  margin: 0px 50px 0px 50px;
+  background-color: grey;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
