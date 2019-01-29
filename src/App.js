@@ -9,21 +9,19 @@ class ProgressMessage extends Component {
   render() {
     return (
       <div className="ProgressTick">
-        {console.log(this.props.goal_amount)}
-        {console.log(this.props.collected_amount)}
-
+        <div className="ProgressTickTriangle">
         ${this.props.goal_amount - this.props.collected_amount} still needed for this project
+        </div>
       </div>
     );
   }
 }
 
 class ProgressBar extends Component {
-  //change percent now to actual percentage
   render() {
     return (
       <div className="PercentageColor">
-        Percent done
+        {this.props.collected_amount / this.props.goal_amount * 100}
       </div>
     );
   }
@@ -111,7 +109,7 @@ class DonationPage extends Component {
       });
   }
 
-    processDonation = () => {
+  processDonation = () => {
       // console.log(this.state.collected_amount);
       // console.log(this.state.suggested_donation);
 
@@ -127,7 +125,9 @@ class DonationPage extends Component {
         <ProgressMessage
           goal_amount={this.state.goal_amount}
           collected_amount={this.state.collected_amount}/>
-        <ProgressBar />
+        <ProgressBar
+          goal_amount={this.state.goal_amount}
+          collected_amount={this.state.collected_amount}/>
         <DonationMessage
           suggested_donation={this.state.suggested_donation}
           onChangeHandler = {this.onSuggestedDonationChangeHandler}

@@ -3,18 +3,48 @@
 }
 
 .AppMargin {
-  margin: 0px 50px 0px 50px;  
+  margin: 0px 50px 0px 50px;
 }
 
 .PercentageColor {
-  margin: 0px 50px 0px 50px;
-  background-color: orange;
+  width: 300px;
+  margin: 10px auto;
+  border: 4px solid #FF6347;
+  background-color: #FF6347;
+  padding: 14px;
+  height: 1px;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  font-family: arial;
+  position: relative;
 }
 
 .ProgressTick {
-  margin: 0px 50px 0px 50px;
-  background-color: grey;
+  width: 300px;
+  margin: 10px auto;
+  border: 4px solid #404040;
+  border-radius: 5px;
+  padding: 14px;
+  text-align: center;
+  font-weight: 900;
   color: white;
+  background-color: #404040;
+  font-family: arial;
+  position: relative;
+}
+
+.ProgressTickTriangle:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #404040;
+  border-bottom: 10px solid transparent;
+  right: 12%;
+  bottom: -23px;
 }
 
 @keyframes App-logo-spin {
